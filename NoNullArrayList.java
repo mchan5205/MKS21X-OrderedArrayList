@@ -11,15 +11,15 @@ public class NoNullArrayList<T> extends ArrayList<T>{
       throw new IllegalArgumentException("no null values");
     }
     else{
-      super.set(y, value);
+      return super.set(y, value);
     }
   }
-  public void add(T value){
+  public boolean add(T value){
     if (value == null){
       throw new IllegalArgumentException("no null values");
     }
     else{
-      super.add(value);
+      return super.add(value);
     }
   }
   public void add(int y, T value){
