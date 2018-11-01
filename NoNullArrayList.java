@@ -6,12 +6,28 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   public NoNullArrayList(int capacity){
     super(capacity)
   }
-  public void set(int y, T value){
+  public T set(int y, T value){
     if (value == null){
-      throw new IllegalArgumentException();
+      throw new IllegalArgumentException("no null values");
     }
     else{
       super.set(y, value);
+    }
+  }
+  public void add(T value){
+    if (value == null){
+      throw new IllegalArgumentException("no null values");
+    }
+    else{
+      super.add(value);
+    }
+  }
+  public void add(int y, T value){
+    if (value == null){
+      throw new IllegalArgumentException("no null values");
+    }
+    else{
+      super.add(value);
     }
   }
 }
