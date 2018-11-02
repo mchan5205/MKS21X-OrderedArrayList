@@ -4,7 +4,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     super();
   }
   public NoNullArrayList(int capacity){
-    super(capacity)
+    super(capacity);
   }
   public T set(int y, T value){
     if (value == null){
@@ -27,7 +27,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
       throw new IllegalArgumentException("no null values");
     }
     else{
-      super.add(value);
+      super.add(y, value);
     }
   }
 }
