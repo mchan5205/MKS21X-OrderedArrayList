@@ -7,6 +7,9 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     super(startingcapacity);
   }
   private int compare(T thing){
+    if (thing == null){
+      throw new IllegalArgumentException("no null values");
+    }
     for (int i = 0; i < super.size(); i += 1){
       if (super.get(i).compareTo(thing) > 0){
         return i;

@@ -23,7 +23,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     }
   }
   public void add(int y, T value){
-    if (value == null){
+    if (value == null){;
       throw new IllegalArgumentException("no null values");
     }
     else{
